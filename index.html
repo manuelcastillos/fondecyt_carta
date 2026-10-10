@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta a Grupos de Evaluación Fondecyt 2027 | Adhesión Científica Nacional</title>
+  <meta name="description" content="Carta abierta a los Grupos de Evaluación Fondecyt ante las declaraciones arbitrarias de fuera de bases por idioma en Justificación de Recursos en los concursos Regular e Iniciación 2027.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- BANNER SUPERIOR DE ALERTA -->
+  <aside aria-label="Alerta urgente" class="bg-red-700 text-white text-xs sm:text-sm py-2 px-4 shadow-inner no-print">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-white pulse-badge"></span>
+        <span class="font-bold tracking-wide uppercase text-red-100">Alerta Comunidad Científica:</span>
+        <span>Concursos Fondecyt Regular 2027 e Iniciación en Investigación 2027</span>
+      </div>
+      <a href="#firmar" class="underline hover:text-red-200 transition-colors font-semibold flex items-center gap-1">
+        Firmar adhesión ahora &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- NAVEGACIÓN -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm no-print">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-blue-900 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+          F
+        </div>
+        <div>
+          <span class="block text-base font-bold text-slate-900 leading-tight">Fondecyt 2027</span>
+          <span class="block text-xs text-slate-500 font-medium">Carta por la Equidad y el Criterio Técnico</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <a href="#resumen" class="hover:text-blue-700 transition-colors">Puntos Clave</a>
+        <a href="#carta" class="hover:text-blue-700 transition-colors">La Carta</a>
+        <a href="#adherentes" class="hover:text-blue-700 transition-colors">Firmantes</a>
+        <a href="#difusion" class="hover:text-blue-700 transition-colors">Difusión</a>
+        <a href="#preguntas" class="hover:text-blue-700 transition-colors">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#firmar" class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-sm transition-all flex items-center gap-2 hover:shadow">
+          <i data-lucide="pen-tool" class="w-4 h-4"></i>
+          <span>Firmar Carta</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-blue-950 via-slate-900 to-slate-900 text-white pt-16 pb-20 px-4 overflow-hidden">
+    <!-- Decoración de fondo -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#93c5fd_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 text-red-300 border border-red-500/40 text-xs font-semibold uppercase tracking-wider mb-6">
+        <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+        Exclusión Masiva Injustificada en ANID
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Carta a los Grupos de Evaluación <span class="text-blue-400">Fondecyt 2027</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-300 font-light max-w-3xl mx-auto mb-8 leading-relaxed">
+        Decenas de investigadoras e investigadores fueron declarados <strong class="text-white font-semibold">fuera de bases</strong> por un único motivo: haber redactado en español justificaciones presupuestarias en un formulario online que inducía a error, <strong class="text-white font-semibold">a pesar de que el 100% de la propuesta científica fue presentada en inglés</strong>.
+      </p>
+
+      <!-- Botones de Acción Inmediata -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+        <a href="#firmar" class="bg-blue-600 hover:bg-blue-500 text-white text-base font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-blue-900/50 hover:shadow-blue-700/50 transition-all flex items-center gap-2.5 transform hover:-translate-y-0.5">
+          <i data-lucide="edit-3" class="w-5 h-5"></i>
+          <span>Sumar mi Firma a la Carta</span>
+        </a>
+
+        <a href="#carta" class="bg-white/10 hover:bg-white/20 text-slate-100 border border-white/20 text-base font-medium px-6 py-3.5 rounded-xl transition-all flex items-center gap-2 backdrop-blur-sm">
+          <i data-lucide="file-text" class="w-5 h-5 text-blue-300"></i>
+          <span>Leer Texto Íntegro</span>
+        </a>
+
+        <button onclick="shareOnWhatsApp()" class="bg-emerald-600 hover:bg-emerald-500 text-white text-base font-semibold px-5 py-3.5 rounded-xl shadow transition-all flex items-center gap-2">
+          <i data-lucide="share-2" class="w-5 h-5"></i>
+          <span>Difundir</span>
+        </button>
+      </div>
+
+      <!-- MÉTRICAS EN TIEMPO REAL -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div id="stat-total" class="text-3xl font-extrabold text-blue-400">3</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Total Adherentes</div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div id="stat-afectados" class="text-3xl font-extrabold text-red-400">3</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Afectados Directos</div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div id="stat-instituciones" class="text-3xl font-extrabold text-amber-400">1</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Instituciones</div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+          <div id="stat-grupos" class="text-3xl font-extrabold text-emerald-400">3</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Grupos Fondecyt</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUNTOS CRÍTICOS / RESUMEN -->
+  <section id="resumen" class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 mb-2">Por qué este reclamo es urgente</h2>
+      <h3 class="text-3xl font-bold text-slate-900">Los 4 Puntos Críticos del Conflicto</h3>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Tarjeta 1 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-red-100 text-red-700 flex items-center justify-center mb-4">
+          <i data-lucide="monitor" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 mb-2">1. Plataforma que indujo al error sin advertencia</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          En el concurso 2027 se eliminó la plantilla tradicional en inglés descargable (<em>"Justification of requested amounts"</em>) sin informar el cambio en las bases. Se reemplazó por campos en pantalla dentro del Sistema de Postulación en Línea (SPL), <strong>cuyos menús e instrucciones están íntegramente en español</strong> y sin aviso alguno de idioma.
+        </p>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-4">
+          <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 mb-2">2. El 70% de la evaluación científica está en inglés</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          El factor de calidad, factibilidad y novedad (70% del puntaje según el numeral 8.2) se juzga sobre la <strong>Formulación y el Resumen</strong>, los cuales fueron presentados íntegramente en inglés. Los recursos son cifras numéricas y breves glosas que no impiden ni alteran la revisión de los pares evaluadores.
+        </p>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4">
+          <i data-lucide="scale" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 mb-2">3. Desproporción y contradicción en las bases</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          El numeral 7.2 letra g) exigía en el mismo formulario ingresar campos en español (Principales Actividades). Además, las bases reservan la exclusión del concurso para errores financieros graves que hagan inviable el proyecto; sancionar un detalle idiomático con la expulsión total resulta contradictorio y desmedido.
+        </p>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+          <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+        <h4 class="text-lg font-bold text-slate-900 mb-2">4. Llamado a la ética y rectitud de los pares</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Solicitamos a los y las integrantes de los Grupos de Evaluación que <strong>se abstengan de evaluar</strong> mientras la ANID no resuelva las solicitudes y recursos de reposición con un criterio uniforme, impidiendo que un tecnicismo administrativo sustituya el juicio técnico del cuerpo de científicos pares.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CARTA COMPLETA (DOCUMENTO FORMAL) -->
+  <section id="carta" class="py-12 px-4 bg-slate-100 border-y border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Barra de herramientas de lectura -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6 no-print">
+        <div class="flex items-center gap-2 text-slate-600 text-sm font-medium">
+          <i data-lucide="file-check" class="w-4 h-4 text-blue-700"></i>
+          <span>Documento Oficial Presentado a los Grupos de Evaluación</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="window.print()" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition shadow-sm">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+            <span>Imprimir / Guardar PDF</span>
+          </button>
+          
+          <a id="btn-google-doc" href="https://docs.google.com/document/d/1vy5-7CaPuhxkOMQoeGfNHbM7MkPsWzEM/edit?rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold hover:bg-blue-100 transition shadow-sm">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+            <span>Ver en Google Docs</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PAPEL ACADÉMICO -->
+      <article class="academic-paper rounded-xl p-8 sm:p-14 text-slate-800 font-serif-letter text-base sm:text-lg leading-relaxed shadow-lg">
+        
+        <!-- Encabezado de la Carta -->
+        <header class="border-b border-slate-200 pb-8 mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold font-display-title text-slate-900 mb-6 text-center leading-tight">
+            Carta a los Grupos de Evaluación Fondecyt
+          </h2>
+          <p class="text-center text-sm font-sans font-semibold uppercase tracking-wider text-red-700 mb-6">
+            Fuera de bases por idioma en Recursos Solicitados (2027)
+          </p>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 font-sans text-xs sm:text-sm text-slate-700 space-y-2">
+            <p>
+              <strong>A las coordinadoras, coordinadores e integrantes de los Grupos de Evaluación de Fondecyt sujetos a la exigencia de idioma inglés del numeral 4.10 de las bases:</strong><br>
+              <span class="text-slate-600">
+                Agronomía; Astronomía y Astrofísica; Biología 1, 2 y 3; Ciencias de la Tierra; Ciencias Económicas y Administrativas; Física Teórica y Experimental; Gravitación y Física de Altas Energías; Ingeniería 1, 2 y 3; Inter-Trans Disciplinario; Matemáticas; Medicina G1; Medicina G2-G3; Química 1 y 2; Salud y Producción Animal.
+              </span>
+            </p>
+            <p class="pt-2 border-t border-slate-200">
+              <strong>Ref.:</strong> Declaraciones de fuera de bases por uso del español en la sección Justificación de Recursos Solicitados — Concursos Fondecyt Regular 2027 y de Iniciación en Investigación 2027.
+            </p>
+          </div>
+        </header>
+
+        <!-- Cuerpo de la carta -->
+        <div class="space-y-6 text-justify">
+          <p class="font-sans font-semibold text-slate-900 not-italic">
+            Estimadas y estimados colegas:
+          </p>
+
+          <p>
+            Quienes suscribimos somos investigadoras e investigadores de instituciones nacionales cuyos proyectos a los concursos Fondecyt Regular 2027 o de Iniciación en Investigación 2027 fueron declarados fuera de bases por un único motivo: <strong>haber redactado en español algún campo de la sección Justificación de Recursos Solicitados</strong>, aunque el Resumen y la Formulación de nuestras propuestas fueron presentados íntegramente en inglés.
+          </p>
+
+          <p>
+            Este error sistemático, y sin precedentes, que incluye al menos múltiples postulaciones de diversas instituciones, se debe a un <strong>cambio en el diseño del proceso de postulación no informado en las bases</strong>. Por primera vez, en este concurso 2027 la justificación se realizó a través de un sistema online sólo disponible en versión española, reemplazando el sistema tradicional de archivos descargables que claramente especificaban el idioma. Este cambio claramente induce al error y explica la gran cantidad de postulaciones declaradas fuera de base por la ANID.
+          </p>
+
+          <p>
+            Nos dirigimos a ustedes porque hemos perdido la confianza en la declaración de los principios fundacionales de Equidad y Transparencia de la ANID, y en su lugar <strong>apelamos al criterio de rectitud y probidad de nuestros propios colegas</strong>, quienes constituyen el motor fundamental del proceso de evaluación. Les pedimos que se abstengan de participar de un proceso claramente injusto, mientras la ANID no resuelva a cabalidad los recursos de reposición y solicitudes formales impulsadas por las instituciones educacionales que nos respaldan.
+          </p>
+
+          <!-- Sección I -->
+          <h3 class="font-sans font-bold text-xl text-slate-900 pt-4 border-b pb-2">
+            I. Antecedentes
+          </h3>
+
+          <ol class="list-decimal pl-6 space-y-4">
+            <li>
+              <strong>El numeral 4.10 de las bases del concurso Regular 2027</strong> exige que las postulaciones de diversos Grupos de Evaluación se presenten en inglés y señala que ese requisito se verificará en las secciones Resumen, Formulación, Recursos Solicitados y Recursos Disponibles.
+            </li>
+            <li>
+              <strong>La sección Recursos Solicitados no es un documento adjunto.</strong> Según el numeral 7.1 de las bases, se completa directamente en pantalla en el Sistema de Postulación en Línea (SPL), cuyos menús, etiquetas, instrucciones y campos se despliegan íntegramente en español.
+            </li>
+            <li>
+              <strong>La existencia de un documento que indica los principales cambios en las bases omitiendo abiertamente</strong> el cambio en la forma operativa de ingresar la justificación de recursos solicitados, quitando el archivo <em>“Justification of requested amounts”</em> ya preparado como plantilla en inglés al igual que el resto de la documentación que sí se mantuvo.
+            </li>
+            <li>
+              <strong>En ese mismo formulario las bases exigen otras secciones en español.</strong> El numeral 7.2 letra g) ordena informar en español las Principales Actividades del proyecto, también para los Grupos de Evaluación sujetos a la exigencia de inglés. El Sistema de Postulación en Línea combina así, en una misma postulación, campos que deben llenarse en inglés y campos que deben llenarse en español, sin distinguirlos visualmente.
+            </li>
+            <li>
+              <strong>En nuestros casos, el contenido afectado se limita a justificaciones breves de ítems presupuestarios</strong> como lo son viajes nacionales e internacionales, gastos de operación, etc. Los montos están expresados en cifras y el contenido científico del proyecto está íntegramente en inglés.
+            </li>
+            <li>
+              <strong>La Agencia declaró fuera de bases la totalidad de cada proyecto.</strong> Los afectados interpusimos oportunamente recursos de reposición, que a la fecha no han sido resueltos.
+            </li>
+          </ol>
+
+          <!-- Sección II -->
+          <h3 class="font-sans font-bold text-xl text-slate-900 pt-6 border-b pb-2">
+            II. Por qué apelamos a ustedes
+          </h3>
+
+          <ol class="list-decimal pl-6 space-y-4">
+            <li>
+              <strong>El error fue causado por cambios en la plataforma no declarados en las bases.</strong> El Sistema de Postulación en Línea estaba configurado totalmente en español y no presentaba ninguna advertencia sobre el requisito de ingresar la información en inglés, induciendo así a la confusión del postulante.
+            </li>
+            <li>
+              <strong>El contenido afectado no altera la evaluación de las propuestas.</strong> El factor de calidad, factibilidad y novedad, que pesa un 70 % según el numeral 8.2, se juzga sobre la Formulación, que está en inglés. La pertinencia de los recursos se aprecia a partir de los montos, que son cifras.
+            </li>
+            <li>
+              <strong>Inconsistencia en el criterio de evaluación.</strong> Mientras el numeral 7.2, letra i.1, reserva la exclusión del proceso para errores financieros graves que hagan inviable el proyecto, un error de idioma, que no afecta la viabilidad de la propuesta, está siendo sancionado con mayor rigurosidad. Esto genera una penalización contradictoria y excesiva frente a faltas de menor relevancia.
+            </li>
+            <li>
+              <strong>La legitimidad del proceso de evaluación.</strong> Permitir que un error de forma margine proyectos antes de su revisión técnica implica sustituir el criterio de los pares por un control administrativo. Por lo tanto, su pronunciamiento es crucial para ratificar que este tipo de control no refleja el criterio del cuerpo evaluador.
+            </li>
+            <li>
+              <strong>La erosión de la confianza en la ANID.</strong> Los propios principios institucionales de la ANID consagran la “valoración de la comunicación honesta, oportuna y permanente” y el deber de “ofrecer un trato igualitario... valorando la diversidad de miradas”. Sin embargo, la realidad actual muestra lo contrario. Los organismos responsables del desarrollo científico de la nación deberían ser los primeros defensores de la inclusión y del criterio técnico amplio. Optar por la exclusión mediante tecnicismos burocráticos vacíos de equidad vulnera la confianza pública y corrompe el propósito fundamental de la institución.
+            </li>
+          </ol>
+
+          <!-- Sección III -->
+          <h3 class="font-sans font-bold text-xl text-slate-900 pt-6 border-b pb-2">
+            III. Lo que les pedimos
+          </h3>
+
+          <ol class="list-decimal pl-6 space-y-4">
+            <li class="p-3 bg-blue-50/50 rounded-lg border-l-4 border-blue-700">
+              <strong>1. Que se abstengan de evaluar las postulaciones</strong> de los concursos Fondecyt Regular 2027 y de Iniciación en Investigación 2027 hasta que la Agencia resuelva los recursos de reposición pendientes con un criterio uniforme para todos los casos de este tipo.
+            </li>
+            <li class="p-3 bg-blue-50/50 rounded-lg border-l-4 border-blue-700">
+              <strong>2. Que comuniquen a la Subdirección de Proyectos de Investigación</strong>, como Grupo de Evaluación, que la redacción en español de justificaciones presupuestarias no impide ni dificulta su evaluación de un proyecto.
+            </li>
+            <li class="p-3 bg-blue-50/50 rounded-lg border-l-4 border-blue-700">
+              <strong>3. Que soliciten a la Agencia que</strong>, en convocatorias futuras, el Sistema de Postulación en Línea indique en cada campo el idioma exigido.
+            </li>
+          </ol>
+
+          <p class="pt-4 italic">
+            Sabemos que lo que pedimos tiene un costo para ustedes y para colegas que cumplieron todas las exigencias. Lo pedimos porque su juicio como pares es precisamente lo que la exigencia de idioma dice proteger, y porque la Agencia difícilmente revisará este criterio si quienes evalúan no se pronuncian.
+          </p>
+
+          <p class="pt-4 font-sans font-semibold text-slate-900">
+            Saludan atentamente,<br>
+            <span class="text-sm font-normal text-slate-600">Investigadoras, investigadores y miembros de la comunidad científica de Chile.</span>
+          </p>
+        </div>
+
+        <!-- LISTA INICIAL DE FIRMANTES EN EL DOCUMENTO -->
+        <div id="print-only-signatures" class="mt-10 pt-6 border-t border-slate-300">
+          <h4 class="font-sans font-bold text-sm text-slate-700 uppercase tracking-wider mb-4">Firmantes Iniciales Convocantes</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded">
+              <p class="font-bold text-slate-900">Angélica Escobar Maldonado</p>
+              <p class="text-slate-600">Universidad de Valparaíso</p>
+              <p class="text-slate-500">Regular 2027 · Biología 3</p>
+              <p class="text-slate-400">Folio: 1272708</p>
+            </div>
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded">
+              <p class="font-bold text-slate-900">Daniel Ramírez Ruiz</p>
+              <p class="text-slate-600">Universidad de Valparaíso</p>
+              <p class="text-slate-500">Regular 2027 · Ing 1</p>
+              <p class="text-slate-400">Folio: 1271540</p>
+            </div>
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded">
+              <p class="font-bold text-slate-900">Jonathan Martínez Pinto</p>
+              <p class="text-slate-600">Universidad de Valparaíso</p>
+              <p class="text-slate-500">Regular 2027 · Inter-Trans Disciplinario</p>
+              <p class="text-slate-400">Folio: 1272745</p>
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- Botón de llamado bajo la carta -->
+      <div class="mt-8 text-center no-print">
+        <a href="#firmar" class="inline-flex items-center gap-3 bg-blue-800 hover:bg-blue-900 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all hover:scale-105">
+          <i data-lucide="check-circle" class="w-6 h-6"></i>
+          <span>Adherir mi Nombre e Institución a esta Carta</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE ADHESIÓN -->
+  <section id="firmar" class="py-16 px-4 max-w-3xl mx-auto no-print">
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl">
+      <div class="text-center max-w-lg mx-auto mb-8">
+        <div class="w-14 h-14 bg-blue-100 text-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="pen-tool" class="w-7 h-7"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Suma tu Adhesión</h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Abierto a investigadoras e investigadores afectados, evaluadores pares, académicos y científicos solidarios de todo el país.
+        </p>
+      </div>
+
+      <!-- Alertas de estado -->
+      <div id="form-alert-success" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm">
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i>
+          <div>
+            <p class="font-bold" id="form-alert-success-title">¡Firma registrada exitosamente!</p>
+            <p class="text-emerald-700 mt-0.5" id="form-alert-success-msg">Tu apoyo ya se encuentra reflejado en la nómina pública. Por favor ayuda a compartir este enlace con tus redes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="form-alert-error" class="hidden mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-sm">
+        <div class="flex items-start gap-3">
+          <i data-lucide="alert-circle" class="w-5 h-5 text-red-600 mt-0.5"></i>
+          <div>
+            <p class="font-bold">Error al registrar</p>
+            <p class="text-red-700 mt-0.5" id="form-alert-error-msg">Por favor verifica los campos obligatorios.</p>
+          </div>
+        </div>
+      </div>
+
+      <form id="adhesion-form" class="space-y-6">
+        
+        <!-- Rol / Tipo de Firmante -->
+        <div>
+          <label class="block text-sm font-bold text-slate-700 mb-2">¿Cuál es tu situación respecto a Fondecyt? *</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <label class="cursor-pointer border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center hover:bg-slate-50 transition has-[:checked]:border-blue-700 has-[:checked]:bg-blue-50/60 has-[:checked]:text-blue-900">
+              <input type="radio" name="tipo" value="Investigador(a) Afectado(a)" checked class="sr-only" onchange="toggleFormFields()">
+              <i data-lucide="user-x" class="w-5 h-5 text-red-600 mb-1"></i>
+              <span class="text-xs font-bold">Investigador Afectado</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">Declarado fuera de bases</span>
+            </label>
+
+            <label class="cursor-pointer border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center hover:bg-slate-50 transition has-[:checked]:border-blue-700 has-[:checked]:bg-blue-50/60 has-[:checked]:text-blue-900">
+              <input type="radio" name="tipo" value="Evaluador(a) Fondecyt" class="sr-only" onchange="toggleFormFields()">
+              <i data-lucide="shield-check" class="w-5 h-5 text-blue-700 mb-1"></i>
+              <span class="text-xs font-bold">Evaluador Fondecyt</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">Integrante grupo evaluación</span>
+            </label>
+
+            <label class="cursor-pointer border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center hover:bg-slate-50 transition has-[:checked]:border-blue-700 has-[:checked]:bg-blue-50/60 has-[:checked]:text-blue-900">
+              <input type="radio" name="tipo" value="Académico(a) Solidario(a)" class="sr-only" onchange="toggleFormFields()">
+              <i data-lucide="heart-handshake" class="w-5 h-5 text-emerald-600 mb-1"></i>
+              <span class="text-xs font-bold">Académico Solidario</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">Comunidad científica / Apoyo</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Nombre Completo -->
+          <div>
+            <label for="input-nombre" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Nombre Completo *
+            </label>
+            <input type="text" id="input-nombre" required placeholder="Ej: Dra. María González Silva"
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+          </div>
+
+          <!-- Institución -->
+          <div>
+            <label for="input-institucion" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Institución / Universidad *
+            </label>
+            <input type="text" id="input-institucion" required placeholder="Ej: Universidad de Chile, PUC, etc." list="lista-universidades"
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+            <datalist id="lista-universidades">
+              <option value="Universidad de Chile">
+              <option value="Pontificia Universidad Católica de Chile">
+              <option value="Universidad de Valparaíso">
+              <option value="Universidad de Concepción">
+              <option value="Universidad de Santiago de Chile (USACH)">
+              <option value="Universidad Austral de Chile">
+              <option value="Universidad Técnica Federico Santa María">
+              <option value="Universidad Diego Portales">
+              <option value="Universidad Adolfo Ibáñez">
+              <option value="Universidad de La Frontera">
+              <option value="Universidad de Talca">
+              <option value="Universidad Católica del Norte">
+              <option value="Universidad de Antofagasta">
+              <option value="Universidad de Tarapacá">
+              <option value="Universidad del Bío-Bío">
+              <option value="Universidad de Magallanes">
+              <option value="Universidad de Los Lagos">
+              <option value="Universidad de La Serena">
+              <option value="Universidad de O'Higgins">
+              <option value="Universidad de Aysén">
+              <option value="Universidad Andrés Bello">
+              <option value="Universidad San Sebastián">
+              <option value="Universidad Autónoma de Chile">
+              <option value="Universidad Mayor">
+            </datalist>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Correo Institucional -->
+          <div>
+            <label for="input-correo" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Correo Electrónico (para verificación) *
+            </label>
+            <input type="email" id="input-correo" required placeholder="nombre@institucion.cl"
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+            <span class="text-[11px] text-slate-500 mt-1 block">Tu correo no será publicado públicamente.</span>
+          </div>
+
+          <!-- Concurso -->
+          <div>
+            <label for="input-concurso" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Concurso *
+            </label>
+            <select id="input-concurso" required
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm bg-white">
+              <option value="Regular 2027">Fondecyt Regular 2027</option>
+              <option value="Iniciación 2027">Fondecyt de Iniciación 2027</option>
+              <option value="Postdoctorado 2027">Fondecyt Postdoctorado</option>
+              <option value="Comunidad Científica">Comunidad Científica / Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Grupo de Evaluación -->
+          <div>
+            <label for="input-grupo" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Grupo de Evaluación Fondecyt
+            </label>
+            <select id="input-grupo"
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm bg-white">
+              <option value="">Selecciona tu área / grupo...</option>
+              <option value="Agronomía">Agronomía</option>
+              <option value="Astronomía y Astrofísica">Astronomía y Astrofísica</option>
+              <option value="Biología 1">Biología 1</option>
+              <option value="Biología 2">Biología 2</option>
+              <option value="Biología 3">Biología 3</option>
+              <option value="Ciencias de la Tierra">Ciencias de la Tierra</option>
+              <option value="Ciencias Económicas y Administrativas">Ciencias Económicas y Administrativas</option>
+              <option value="Física Teórica y Experimental">Física Teórica y Experimental</option>
+              <option value="Gravitación y Física de Altas Energías">Gravitación y Física de Altas Energías</option>
+              <option value="Ingeniería 1">Ingeniería 1</option>
+              <option value="Ingeniería 2">Ingeniería 2</option>
+              <option value="Ingeniería 3">Ingeniería 3</option>
+              <option value="Inter-Trans Disciplinario">Inter-Trans Disciplinario</option>
+              <option value="Matemáticas">Matemáticas</option>
+              <option value="Medicina G1">Medicina G1</option>
+              <option value="Medicina G2-G3">Medicina G2-G3</option>
+              <option value="Química 1">Química 1</option>
+              <option value="Química 2">Química 2</option>
+              <option value="Salud y Producción Animal">Salud y Producción Animal</option>
+              <option value="Ciencias Jurídicas y Políticas">Ciencias Jurídicas y Políticas</option>
+              <option value="Filosofía">Filosofía</option>
+              <option value="Historia">Historia</option>
+              <option value="Lingüística, Literatura y Filología">Lingüística, Literatura y Filología</option>
+              <option value="Sociología y Ciencias de la Comunicación">Sociología y Ciencias de la Comunicación</option>
+              <option value="Psicología">Psicología</option>
+              <option value="Educación">Educación</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <!-- Folio de Postulación (opcional/afectados) -->
+          <div id="wrapper-folio">
+            <label for="input-folio" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+              Folio de Postulación (opcional)
+            </label>
+            <input type="text" id="input-folio" placeholder="Ej: 1272708"
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+            <span class="text-[11px] text-slate-500 mt-1 block">Permite verificar el caso en los registros ANID.</span>
+          </div>
+        </div>
+
+        <!-- Comentario / Testimonio Breve -->
+        <div>
+          <label for="input-comentario" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+            Comentario o Testimonio Breve (opcional)
+          </label>
+          <textarea id="input-comentario" rows="2" placeholder="Ej: 'Meses de trabajo técnico desestimados por 2 líneas en una glosa presupuestaria...'"
+            class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"></textarea>
+        </div>
+
+        <!-- Consentimiento -->
+        <div class="flex items-start gap-3 pt-2">
+          <input type="checkbox" id="check-consentimiento" required checked
+            class="mt-1 w-4 h-4 text-blue-700 rounded border-slate-300 focus:ring-blue-600">
+          <label for="check-consentimiento" class="text-xs text-slate-600 leading-snug">
+            Autorizo que mi <strong>Nombre, Institución y Concurso</strong> aparezcan en la nómina pública de adherentes en esta página web y en la carta entregada a los Grupos de Evaluación.
+          </label>
+        </div>
+
+        <!-- Botón de Envío -->
+        <button type="submit" id="btn-submit"
+          class="w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 hover:shadow-lg disabled:opacity-50">
+          <i data-lucide="send" class="w-5 h-5"></i>
+          <span id="btn-submit-text">Enviar y Adherir a la Carta</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- NÓMINA PÚBLICA DE ADHERENTES -->
+  <section id="adherentes" class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 mb-2">Comunidad en Acción</h2>
+        <h3 class="text-3xl font-extrabold text-slate-900">Nómina Pública de Adherentes</h3>
+        <p class="text-slate-600 text-sm mt-1">
+          Investigadoras e investigadores que exigen criterio, rectitud y transparencia en la ciencia chilena.
+        </p>
+      </div>
+
+      <!-- Botón Exportar CSV -->
+      <div class="flex items-center gap-3 no-print">
+        <button onclick="exportToCSV()" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-300 text-slate-700 text-xs font-bold hover:bg-slate-50 transition shadow-sm">
+          <i data-lucide="download" class="w-4 h-4 text-emerald-600"></i>
+          <span>Descargar Lista (Excel / CSV)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filtros y Búsqueda -->
+    <div id="filtros-adherentes" class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm mb-6 flex flex-col sm:flex-row items-center gap-4 no-print">
+      <!-- Buscador -->
+      <div class="relative w-full sm:flex-1">
+        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+        <input type="text" id="filtro-busqueda" placeholder="Buscar por nombre o universidad..."
+          class="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+          oninput="filtrarAdherentes()">
+      </div>
+
+      <!-- Filtro por Tipo -->
+      <div class="w-full sm:w-auto">
+        <select id="filtro-tipo" onchange="filtrarAdherentes()"
+          class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-medium text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600">
+          <option value="todos">Todos los roles</option>
+          <option value="Afectado">Investigadores Afectados</option>
+          <option value="Evaluador">Evaluadores Fondecyt</option>
+          <option value="Solidario">Académicos Solidarios</option>
+        </select>
+      </div>
+
+      <!-- Filtro por Grupo -->
+      <div class="w-full sm:w-auto">
+        <select id="filtro-grupo" onchange="filtrarAdherentes()"
+          class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-medium text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600">
+          <option value="todos">Todos los Grupos</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Contador de resultados -->
+    <div class="flex items-center justify-between text-xs font-semibold text-slate-500 mb-4 px-1">
+      <span id="conteo-firmas">Cargando adherentes...</span>
+      <span class="text-slate-400">Actualizado recientemente</span>
+    </div>
+
+    <!-- Tabla de Adherentes -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm text-slate-700">
+          <thead class="bg-slate-50 text-slate-500 uppercase text-[11px] font-bold tracking-wider border-b border-slate-200">
+            <tr>
+              <th class="py-3.5 px-4 w-12 text-center">#</th>
+              <th class="py-3.5 px-4">Nombre</th>
+              <th class="py-3.5 px-4">Institución</th>
+              <th class="py-3.5 px-4">Concurso / Rol</th>
+              <th class="py-3.5 px-4">Grupo de Evaluación</th>
+              <th class="py-3.5 px-4 text-center">Folio</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-adherentes" class="divide-y divide-slate-100">
+            <!-- Filas inyectadas dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- KIT DE DIFUSIÓN Y PRENSA -->
+  <section id="difusion" class="py-16 px-4 bg-blue-900 text-white no-print">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full bg-blue-800 text-blue-200 text-xs font-bold uppercase tracking-wider">Acción Comunitaria</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Difunde y Multiplica la Visibilidad</h2>
+        <p class="text-blue-200 text-sm mt-3">
+          El éxito de esta demanda depende de que los Grupos de Evaluación reciban este mensaje antes de comenzar las revisiones.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Compartir en Redes y WhatsApp -->
+        <div class="bg-blue-950/60 border border-blue-800/80 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
+          <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+            <i data-lucide="share-2" class="w-5 h-5 text-blue-400"></i>
+            Compartir en Redes y Canales
+          </h3>
+          <p class="text-slate-300 text-xs mb-6 leading-relaxed">
+            Envía esta carta a tus grupos de WhatsApp de departamento, sociedades científicas, decanatos y redes sociales:
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <button onclick="shareOnWhatsApp()" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-sm transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              WhatsApp
+            </button>
+
+            <button onclick="shareOnTwitter()" class="flex items-center justify-center gap-2 bg-black hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl text-sm transition">
+              <span class="font-black text-sm">𝕏</span>
+              Twitter / X
+            </button>
+
+            <button onclick="shareOnLinkedIn()" class="flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl text-sm transition">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+              LinkedIn
+            </button>
+
+            <button onclick="copyShareLink()" class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-4 rounded-xl text-sm transition">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+              Copiar Enlace
+            </button>
+          </div>
+
+          <!-- Mensaje para WhatsApp copiable -->
+          <div class="bg-blue-900/60 p-4 rounded-xl border border-blue-800">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-blue-300">Mensaje sugerido para WhatsApp:</span>
+              <button onclick="copyPredefinedText()" class="text-xs text-blue-200 underline hover:text-white flex items-center gap-1">
+                <i data-lucide="copy" class="w-3 h-3"></i> Copiar texto
+              </button>
+            </div>
+            <p id="whatsapp-sample-text" class="text-xs text-slate-300 italic leading-relaxed select-all">
+              ⚠️ URGENTE COMUNIDAD CIENTÍFICA: Investigadores de todo Chile han sido declarados fuera de bases en Fondecyt Regular e Iniciación 2027 por redactar en español un campo presupuestario en la plataforma SPL (mientras el 100% de la propuesta científica está en inglés). Les invitamos a leer y firmar la carta a los Grupos de Evaluación:
+            </p>
+          </div>
+        </div>
+
+        <!-- Vocería y Contacto Prensa -->
+        <div class="bg-blue-950/60 border border-blue-800/80 rounded-2xl p-6 sm:p-8 backdrop-blur-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="megaphone" class="w-5 h-5 text-amber-400"></i>
+              Vocería y Medios de Comunicación
+            </h3>
+            <p class="text-slate-300 text-xs mb-4 leading-relaxed">
+              Si eres periodista, representante gremial, decano o medio de comunicación y deseas contactar al equipo coordinador de investigadoras e investigadores afectados:
+            </p>
+            
+            <div class="space-y-3 mb-6 text-xs text-slate-200">
+              <div class="flex items-center gap-3 p-3 bg-blue-900/50 rounded-xl border border-blue-800">
+                <i data-lucide="mail" class="w-4 h-4 text-blue-300"></i>
+                <div>
+                  <span class="block text-[10px] text-slate-400 uppercase font-semibold">Correo de Contacto y Coordinación</span>
+                  <a id="link-contact-email" href="mailto:voceria.afectados.fondecyt@gmail.com" class="font-bold underline hover:text-white">
+                    voceria.afectados.fondecyt@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 p-3 bg-blue-900/50 rounded-xl border border-blue-800">
+                <i data-lucide="file-text" class="w-4 h-4 text-emerald-300"></i>
+                <div>
+                  <span class="block text-[10px] text-slate-400 uppercase font-semibold">Dossier y Minuta de Antecedentes</span>
+                  <span class="font-medium">Casos documentados y comparativas del Sistema SPL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-200 text-xs">
+            <strong>Nota para la comunidad:</strong> Todas las adhesiones se recopilan con fines de transparencia y presentación formal a la Subdirección de Proyectos de Investigación y comités respectivos.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES (FAQ) -->
+  <section id="preguntas" class="py-16 px-4 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-blue-800 mb-2">Resolviendo Dudas</h2>
+      <h3 class="text-3xl font-extrabold text-slate-900">Preguntas Frecuentes</h3>
+    </div>
+
+    <div class="space-y-4">
+      <details class="group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm open:shadow-md transition">
+        <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer list-none">
+          <span>¿Por qué este no fue simplemente un descuido del postulante?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed border-t pt-3">
+          Históricamente, Fondecyt solicitaba adjuntar un archivo descargable claramente titulado en inglés (<em>"Justification of requested amounts"</em>). En la convocatoria 2027, la ANID eliminó este archivo sin avisarlo explícitamente en el documento de cambios de bases y lo sustituyó por un formulario web en el SPL completamente en español, sin ninguna indicación o validación visual del idioma, e intercalando otros campos que obligatoriamente debían llenarse en español (como Principales Actividades). El sistema indujo al error a decenas de investigadores con proyectos cuya formulación científica estaba 100% en inglés.
+        </p>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm open:shadow-md transition">
+        <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer list-none">
+          <span>¿Qué pueden hacer los Grupos de Evaluación de Fondecyt?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed border-t pt-3">
+          Los Grupos de Evaluación son el cuerpo de pares académicos que da legitimidad técnica y ética al concurso. Al solicitarles que se abstengan de evaluar mientras la ANID no resuelva las reposiciones con criterio uniforme, se busca salvaguardar el valor de la investigación nacional y recordar a la Agencia que el filtro administrativo no debe atropellar el juicio científico de los proyectos.
+        </p>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm open:shadow-md transition">
+        <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer list-none">
+          <span>¿Puedo firmar si no fui afectado directamente?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="mt-3 text-slate-600 text-sm leading-relaxed border-t pt-3">
+          ¡Absolutamente! La carta convoca a evaluadores actuales, investigadores principales, académicos de todas las universidades y disciplinas, sociedades científicas y miembros de la comunidad que consideran inaceptable que se desechen meses de trabajo y fondos públicos de investigación por un defecto de diseño de una plataforma web.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-slate-950 text-slate-400 py-12 px-4 border-t border-slate-800 text-xs">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <p class="font-bold text-white text-sm mb-1">Iniciativa Autoconvocada de Investigadoras e Investigadores de Chile</p>
+        <p>Por la transparencia, la equidad y el criterio técnico en Fondecyt y ANID.</p>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#carta" class="hover:text-white transition">La Carta</a>
+        <a href="#firmar" class="hover:text-white transition">Firmar</a>
+        <a href="#adherentes" class="hover:text-white transition">Nómina</a>
+        <a id="footer-google-doc" href="https://docs.google.com/document/d/1vy5-7CaPuhxkOMQoeGfNHbM7MkPsWzEM/edit?rtpof=true&sd=true" target="_blank" class="hover:text-white transition">Documento Original</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Inicializar iconos de Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>
