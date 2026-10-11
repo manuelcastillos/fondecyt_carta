@@ -203,13 +203,40 @@ function combinarAdherentes(base, extras) {
 // Actualizar tabla, métricas y filtros
 function actualizarVista() {
   renderizarTabla(adherentesData);
+  renderizarFirmasCarta(adherentesData);
   actualizarEstadisticas();
   if (window.lucide) {
     lucide.createIcons();
   }
 }
 
-// Renderizar filas en la tabla
+// Renderizar nómina dinámica dentro de la carta
+function renderizarFirmasCarta(lista) {
+  const container = document.getElementById("lista-firmas-en-carta");
+  const badgeTotal = document.getElementById("carta-badge-total");
+  if (badgeTotal) badgeTotal.textContent = lista.length;
+  if (!container) return;
+
+  container.innerHTML = "";
+  lista.forEach((item, index) => {
+    if (item.nombre && (item.nombre.toLowerCase().includes("castillo") || item.folio === "1271665")) {
+      item.nombre = "Manuel Castillo Silva";
+      item.folio = "1271665";
+    }
+
+    const card = document.createElement("div");
+    card.className = "p-3 bg-white border border-slate-200 rounded-xl shadow-xs";
+    card.innerHTML = `
+      <div class="font-bold text-slate-900">${index + 1}. ${escapeHtml(item.nombre)}</div>
+      <div class="text-slate-600 font-medium">${escapeHtml(item.institucion)}</div>
+      <div class="text-slate-500 text-[11px] mt-0.5">${escapeHtml(item.concurso || '')} · ${escapeHtml(item.grupo || '')}</div>
+      ${item.folio ? `<div class="text-slate-400 font-mono text-[10px] mt-0.5">Folio: ${escapeHtml(item.folio)}</div>` : ''}
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Renderizar filas en la tabla principal
 function renderizarTabla(lista) {
   const tbody = document.getElementById("tbody-adherentes");
   const conteoEl = document.getElementById("conteo-firmas");
@@ -233,12 +260,14 @@ function renderizarTabla(lista) {
   }
 
   lista.forEach((adherente, index) => {
-    // Normalizar explícitamente el nombre al renderizar
-    if (adherente.nombre && (adherente.nombre.toLowerCase().startsWith("manue") || adherente.nombre.toLowerCase().includes("dr. manuel"))) {
+    // Normalizar explícitamente el nombre, folio y comentario de Manuel Castillo Silva
+    if (adherente.nombre && (adherente.nombre.toLowerCase().includes("castillo") || adherente.folio === "1271665" || adherente.nombre.toLowerCase().startsWith("manue"))) {
       adherente.nombre = "Manuel Castillo Silva";
-    }
-    if (adherente.nombre === "Manuel Castillo Silva") {
-      adherente.folio = adherente.folio || "1271665";
+      adherente.folio = "1271665";
+      adherente.comentario = "En más de 10 años, he tenido diversos proyectos ANID a mi cargo sin observaciones de este tipo.";
+      adherente.institucion = "Universidad de Valparaíso";
+      adherente.grupo = "Ciencias de la Tierra";
+      adherente.concurso = "Regular 2027";
     }
 
     const tr = document.createElement("tr");
