@@ -448,8 +448,23 @@ async function manejarEnvioFormulario(e) {
   try {
     let enviado = false;
 
-    // 1. Enviar a servidor Python local si está disponible
-    if (backendType === "api" || window.location.protocol.startsWith("http")) {
+    // 1. Si hay Google Sheets configurado (producción / GitHub Pages)
+    if (typeof CONFIG !== "undefined" && CONFIG.googleSheetScriptUrl && CONFIG.googleSheetScriptUrl.startsWith("http")) {
+      try {
+        await fetch(CONFIG.googleSheetScriptUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(nuevoAdherente)
+        });
+        enviado = true;
+      } catch (err) {
+        console.warn("Fallo al enviar a Google Apps Script:", err);
+      }
+    }
+
+    // 2. Enviar a servidor Python local si está disponible (entorno local)
+    if (!enviado && backendType === "api") {
       try {
         const res = await fetch("/api/adherentes", {
           method: "POST",
@@ -465,22 +480,7 @@ async function manejarEnvioFormulario(e) {
           return;
         }
       } catch (err) {
-        // Continuar a otros métodos
-      }
-    }
-
-    // 2. Enviar a Google Apps Script si está configurado
-    if (!enviado && typeof CONFIG !== "undefined" && CONFIG.googleSheetScriptUrl && CONFIG.googleSheetScriptUrl.startsWith("http")) {
-      try {
-        await fetch(CONFIG.googleSheetScriptUrl, {
-          method: "POST",
-          mode: "no-cors", // Google Apps Script Web App soporta no-cors
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(nuevoAdherente)
-        });
-        enviado = true;
-      } catch (err) {
-        console.warn("Fallo al enviar a Google Apps Script:", err);
+        // Continuar
       }
     }
 
