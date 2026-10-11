@@ -5,6 +5,18 @@ const FIRMANTES_BASE = [
   {
     id: 1,
     fecha: "2026-10-09 10:00:00",
+    nombre: "Manuel Castillo Silva",
+    institucion: "Universidad de Valparaíso",
+    correo: "",
+    tipo: "Investigador(a) Afectado(a)",
+    concurso: "Regular 2027",
+    grupo: "Ciencias de la Tierra",
+    folio: "",
+    comentario: "Convocante. Afectado por exclusión de justificación de recursos en plataforma SPL."
+  },
+  {
+    id: 2,
+    fecha: "2026-10-09 10:05:00",
     nombre: "Angélica Escobar Maldonado",
     institucion: "Universidad de Valparaíso",
     correo: "",
@@ -15,8 +27,8 @@ const FIRMANTES_BASE = [
     comentario: "Postulación desestimada por redacción en español en justificación de recursos."
   },
   {
-    id: 2,
-    fecha: "2026-10-09 10:05:00",
+    id: 3,
+    fecha: "2026-10-09 10:10:00",
     nombre: "Daniel Ramírez Ruiz",
     institucion: "Universidad de Valparaíso",
     correo: "",
@@ -27,8 +39,8 @@ const FIRMANTES_BASE = [
     comentario: "Formulación técnica y científica presentada 100% en inglés."
   },
   {
-    id: 3,
-    fecha: "2026-10-09 10:10:00",
+    id: 4,
+    fecha: "2026-10-09 10:15:00",
     nombre: "Jonathan Martínez Pinto",
     institucion: "Universidad de Valparaíso",
     correo: "",
@@ -37,6 +49,18 @@ const FIRMANTES_BASE = [
     grupo: "Inter-Trans Disciplinario",
     folio: "1272745",
     comentario: "Exclusión desproporcionada generada por ambigüedad del sistema SPL."
+  },
+  {
+    id: 5,
+    fecha: "2026-10-09 10:20:00",
+    nombre: "Evandro Ferrada Poblete",
+    institucion: "Universidad de Valparaíso",
+    correo: "",
+    tipo: "Investigador(a) Afectado(a)",
+    concurso: "Regular 2027",
+    grupo: "Biología 1",
+    folio: "1271725",
+    comentario: "Formulación técnica y científica presentada íntegramente en inglés."
   }
 ];
 
@@ -115,7 +139,20 @@ async function cargarAdherentes() {
   const almacenados = localStorage.getItem("fondecyt_adherentes_2027");
   if (almacenados) {
     try {
-      const parsed = JSON.parse(almacenados);
+      let parsed = JSON.parse(almacenados);
+      let corregido = false;
+      // Corregir o remover entradas con "Manue Castillo"
+      parsed = parsed.filter(item => {
+        const nom = (item.nombre || "").trim().toLowerCase();
+        if (nom.startsWith("manue castillo") || nom === "manue castillo silva") {
+          corregido = true;
+          return false; // se excluye porque ya está en FIRMANTES_BASE corregido
+        }
+        return true;
+      });
+      if (corregido) {
+        localStorage.setItem("fondecyt_adherentes_2027", JSON.stringify(parsed));
+      }
       adherentesData = combinarAdherentes(FIRMANTES_BASE, parsed);
     } catch (e) {
       adherentesData = [...FIRMANTES_BASE];
@@ -128,14 +165,32 @@ async function cargarAdherentes() {
   actualizarVista();
 }
 
-// Combina listas evitando duplicados por nombre exacto
+// Combina listas evitando duplicados por nombre exacto y corrigiendo erratas
 function combinarAdherentes(base, extras) {
   const map = new Map();
-  base.forEach(item => map.set((item.nombre || "").trim().toLowerCase(), item));
-  extras.forEach(item => {
-    const key = (item.nombre || "").trim().toLowerCase();
-    if (key) map.set(key, item);
+  
+  // Función para normalizar nombres y corregir erratas comunes
+  const normalizarNombre = (nombre) => {
+    let n = (nombre || "").trim();
+    if (n.toLowerCase().startsWith("manue castillo")) {
+      return "Manuel Castillo Silva";
+    }
+    return n;
+  };
+
+  base.forEach(item => {
+    item.nombre = normalizarNombre(item.nombre);
+    map.set(item.nombre.toLowerCase(), item);
   });
+
+  extras.forEach(item => {
+    item.nombre = normalizarNombre(item.nombre);
+    const key = item.nombre.toLowerCase();
+    if (key && !map.has(key)) {
+      map.set(key, item);
+    }
+  });
+
   return Array.from(map.values());
 }
 
