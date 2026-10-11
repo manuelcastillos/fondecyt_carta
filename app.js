@@ -77,6 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", manejarEnvioFormulario);
   }
+
+  // Refrescar nómina automáticamente cada 45 segundos para mostrar nuevas firmas en vivo
+  setInterval(() => {
+    cargarAdherentes();
+  }, 45000);
 });
 
 // Aplica enlaces y valores definidos en config.js
@@ -119,7 +124,9 @@ async function cargarAdherentes() {
   // 2. Si hay Google Sheets Web App configurado en config.js
   if (typeof CONFIG !== "undefined" && CONFIG.googleSheetScriptUrl && CONFIG.googleSheetScriptUrl.startsWith("http")) {
     try {
-      const res = await fetch(CONFIG.googleSheetScriptUrl);
+      const sep = CONFIG.googleSheetScriptUrl.includes("?") ? "&" : "?";
+      const sheetUrlConCacheBuster = `${CONFIG.googleSheetScriptUrl}${sep}_t=${Date.now()}`;
+      const res = await fetch(sheetUrlConCacheBuster, { cache: "no-store" });
       if (res.ok) {
         const json = await res.json();
         if (json && json.data && json.data.length > 0) {
@@ -499,6 +506,11 @@ async function manejarEnvioFormulario(e) {
     document.getElementById("adhesion-form").reset();
     toggleFormFields();
     actualizarVista();
+
+    // Re-sincronizar con Google Sheets tras 3 segundos para obtener datos consolidados
+    setTimeout(() => {
+      cargarAdherentes();
+    }, 3000);
 
     // Scroll suave hacia la nómina o hacia la confirmación
     alertSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
