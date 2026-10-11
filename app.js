@@ -5,18 +5,6 @@ const FIRMANTES_BASE = [
   {
     id: 1,
     fecha: "2026-10-09 10:00:00",
-    nombre: "Manuel Castillo Silva",
-    institucion: "Universidad de Valparaíso",
-    correo: "",
-    tipo: "Investigador(a) Afectado(a)",
-    concurso: "Regular 2027",
-    grupo: "Ciencias de la Tierra",
-    folio: "",
-    comentario: "Convocante. Afectado por exclusión de justificación de recursos en plataforma SPL."
-  },
-  {
-    id: 2,
-    fecha: "2026-10-09 10:05:00",
     nombre: "Angélica Escobar Maldonado",
     institucion: "Universidad de Valparaíso",
     correo: "",
@@ -27,8 +15,8 @@ const FIRMANTES_BASE = [
     comentario: "Postulación desestimada por redacción en español en justificación de recursos."
   },
   {
-    id: 3,
-    fecha: "2026-10-09 10:10:00",
+    id: 2,
+    fecha: "2026-10-09 10:05:00",
     nombre: "Daniel Ramírez Ruiz",
     institucion: "Universidad de Valparaíso",
     correo: "",
@@ -39,8 +27,8 @@ const FIRMANTES_BASE = [
     comentario: "Formulación técnica y científica presentada 100% en inglés."
   },
   {
-    id: 4,
-    fecha: "2026-10-09 10:15:00",
+    id: 3,
+    fecha: "2026-10-09 10:10:00",
     nombre: "Jonathan Martínez Pinto",
     institucion: "Universidad de Valparaíso",
     correo: "",
@@ -49,6 +37,18 @@ const FIRMANTES_BASE = [
     grupo: "Inter-Trans Disciplinario",
     folio: "1272745",
     comentario: "Exclusión desproporcionada generada por ambigüedad del sistema SPL."
+  },
+  {
+    id: 4,
+    fecha: "2026-10-09 10:15:00",
+    nombre: "Manuel Castillo Silva",
+    institucion: "Universidad de Valparaíso",
+    correo: "",
+    tipo: "Investigador(a) Afectado(a)",
+    concurso: "Regular 2027",
+    grupo: "Ciencias de la Tierra",
+    folio: "1271665",
+    comentario: "En más de 10 años, he tenido diversos proyectos ANID a mi cargo sin observaciones de este tipo."
   },
   {
     id: 5,
@@ -141,14 +141,15 @@ async function cargarAdherentes() {
     try {
       let parsed = JSON.parse(almacenados);
       let corregido = false;
-      // Corregir o remover entradas con "Manue Castillo"
-      parsed = parsed.filter(item => {
+      // Corregir cualquier registro que tenga 'Manue' o folio '1271665'
+      parsed = parsed.map(item => {
         const nom = (item.nombre || "").trim().toLowerCase();
-        if (nom.startsWith("manue castillo") || nom === "manue castillo silva") {
+        if (nom.startsWith("manue") || nom.includes("castillo") || item.folio === "1271665") {
+          item.nombre = "Manuel Castillo Silva";
+          item.folio = item.folio || "1271665";
           corregido = true;
-          return false; // se excluye porque ya está en FIRMANTES_BASE corregido
         }
-        return true;
+        return item;
       });
       if (corregido) {
         localStorage.setItem("fondecyt_adherentes_2027", JSON.stringify(parsed));
@@ -172,7 +173,7 @@ function combinarAdherentes(base, extras) {
   // Función para normalizar nombres y corregir erratas comunes
   const normalizarNombre = (nombre) => {
     let n = (nombre || "").trim();
-    if (n.toLowerCase().startsWith("manue castillo")) {
+    if (n.toLowerCase().startsWith("manue") || n.toLowerCase().includes("dr. manuel")) {
       return "Manuel Castillo Silva";
     }
     return n;
@@ -186,7 +187,12 @@ function combinarAdherentes(base, extras) {
   extras.forEach(item => {
     item.nombre = normalizarNombre(item.nombre);
     const key = item.nombre.toLowerCase();
-    if (key && !map.has(key)) {
+    if (key === "manuel castillo silva" && map.has(key)) {
+      // Preservar comentario o folio del usuario si los había ingresado
+      const baseItem = map.get(key);
+      if (item.folio) baseItem.folio = item.folio;
+      if (item.comentario) baseItem.comentario = item.comentario;
+    } else if (key && !map.has(key)) {
       map.set(key, item);
     }
   });
@@ -227,6 +233,14 @@ function renderizarTabla(lista) {
   }
 
   lista.forEach((adherente, index) => {
+    // Normalizar explícitamente el nombre al renderizar
+    if (adherente.nombre && (adherente.nombre.toLowerCase().startsWith("manue") || adherente.nombre.toLowerCase().includes("dr. manuel"))) {
+      adherente.nombre = "Manuel Castillo Silva";
+    }
+    if (adherente.nombre === "Manuel Castillo Silva") {
+      adherente.folio = adherente.folio || "1271665";
+    }
+
     const tr = document.createElement("tr");
     tr.className = "hover:bg-slate-50/80 transition-colors row-animate";
 

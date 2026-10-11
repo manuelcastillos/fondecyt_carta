@@ -45,10 +45,10 @@ def init_db():
     count = c.fetchone()[0]
     if count == 0:
         firmantes_iniciales = [
-            ("2026-10-09 10:00:00", "Manuel Castillo Silva", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Ciencias de la Tierra", "", "Convocante. Postulación declarada fuera de bases por justificación en SPL.", 1),
-            ("2026-10-09 10:05:00", "Angélica Escobar Maldonado", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Biología 3", "1272708", "Postulación rechazada por justificación de pasajes en español.", 1),
-            ("2026-10-09 10:10:00", "Daniel Ramírez Ruiz", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Ingeniería 1", "1271540", "Formulación técnica 100% en inglés declarada fuera de bases.", 1),
-            ("2026-10-09 10:15:00", "Jonathan Martínez Pinto", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Inter-Trans Disciplinario", "1272745", "Exclusión arbitraria por plataforma que inducía al error.", 1),
+            ("2026-10-09 10:00:00", "Angélica Escobar Maldonado", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Biología 3", "1272708", "Postulación rechazada por justificación de pasajes en español.", 1),
+            ("2026-10-09 10:05:00", "Daniel Ramírez Ruiz", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Ingeniería 1", "1271540", "Formulación técnica 100% en inglés declarada fuera de bases.", 1),
+            ("2026-10-09 10:10:00", "Jonathan Martínez Pinto", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Inter-Trans Disciplinario", "1272745", "Exclusión arbitraria por plataforma que inducía al error.", 1),
+            ("2026-10-09 10:15:00", "Manuel Castillo Silva", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Ciencias de la Tierra", "1271665", "En más de 10 años, he tenido diversos proyectos ANID a mi cargo sin observaciones de este tipo.", 1),
             ("2026-10-09 10:20:00", "Evandro Ferrada Poblete", "Universidad de Valparaíso", "", "Investigador(a) Afectado(a)", "Regular 2027", "Biología 1", "1271725", "Formulación técnica 100% en inglés declarada fuera de bases.", 1)
         ]
         c.executemany('''
