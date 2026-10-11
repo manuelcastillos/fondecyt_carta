@@ -10,7 +10,7 @@ const CONFIG = {
   
   // URL de Google Apps Script (opcional, para guardar firmas directamente en Google Sheets gratis)
   // Deja vacío "" si usas el servidor local Python o almacenamiento en navegador
-  googleSheetScriptUrl: "",
+  googleSheetScriptUrl: "https://script.google.com/macros/s/AKfycbzuI8MEh02pRG-OZHy5asKyb_KS1Ir0RzytnDCIf9wLmYYNv2EJLXJvv7Uhokk8c3lK/exec",
   
   // Mensajes predefinidos para difusión
   shareMessages: {
