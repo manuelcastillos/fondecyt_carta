@@ -7,6 +7,9 @@ const CONFIG = {
   
   // Correo de contacto y vocería para prensa y coordinación
   contactEmail: "voceria.afectados.fondecyt@gmail.com",
+
+  // Enlace corto público para compartir (redirige al sitio)
+  shortUrl: "https://tinyurl.com/carta-fondecyt-2027",
   
   // URL de Google Apps Script (opcional, para guardar firmas directamente en Google Sheets gratis)
   // Deja vacío "" si usas el servidor local Python o almacenamiento en navegador

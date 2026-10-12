@@ -535,7 +535,7 @@ function mostrarError(mensaje) {
 
 // DIFUSIÓN: WhatsApp
 function shareOnWhatsApp() {
-  const url = window.location.href.split("#")[0];
+  const url = getShareUrl();
   const mensajeBase = (typeof CONFIG !== "undefined" && CONFIG.shareMessages?.whatsapp) 
     ? CONFIG.shareMessages.whatsapp 
     : "⚠️ URGENTE COMUNIDAD CIENTÍFICA: Investigadores de Chile declarados fuera de bases en Fondecyt 2027 por tecnicismo en la plataforma SPL de ANID (Justificación de recursos en español mientras 100% científico en inglés). Firma la carta aquí: ";
@@ -546,7 +546,7 @@ function shareOnWhatsApp() {
 
 // DIFUSIÓN: X / Twitter
 function shareOnTwitter() {
-  const url = window.location.href.split("#")[0];
+  const url = getShareUrl();
   const tweetText = (typeof CONFIG !== "undefined" && CONFIG.shareMessages?.twitter)
     ? CONFIG.shareMessages.twitter
     : "Investigadores de Chile piden a los Grupos de Evaluación Fondecyt no avalar exclusiones injustas de la @ANIDChile en Fondecyt 2027 por tecnicismo de idioma. ¡Apoya la carta abierta! #Fondecyt2027 #CienciaChilena";
@@ -557,14 +557,14 @@ function shareOnTwitter() {
 
 // DIFUSIÓN: LinkedIn
 function shareOnLinkedIn() {
-  const url = window.location.href.split("#")[0];
+  const url = getShareUrl();
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
   window.open(linkedinUrl, "_blank");
 }
 
 // Copiar enlace general
 function copyShareLink() {
-  const url = window.location.href.split("#")[0];
+  const url = getShareUrl();
   navigator.clipboard.writeText(url).then(() => {
     alert("¡Enlace copiado al portapapeles! Ya puedes pegarlo y compartirlo.");
   }).catch(() => {
@@ -575,7 +575,7 @@ function copyShareLink() {
 // Copiar texto sugerido para grupos de WhatsApp
 function copyPredefinedText() {
   const p = document.getElementById("whatsapp-sample-text");
-  const url = window.location.href.split("#")[0];
+  const url = getShareUrl();
   const texto = p ? `${p.innerText} ${url}` : url;
   
   navigator.clipboard.writeText(texto).then(() => {
@@ -625,4 +625,10 @@ function escapeHtml(text) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+// URL pública para compartir: usa el enlace corto si está configurado
+function getShareUrl() {
+  if (typeof CONFIG !== "undefined" && CONFIG.shortUrl) return CONFIG.shortUrl;
+  return window.location.href.split("#")[0];
 }
