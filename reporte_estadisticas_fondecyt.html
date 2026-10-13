@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estadísticas y Análisis de Adherentes - Carta FONDECYT (Actualizado)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; }
+  .header-box { background: linear-gradient(135deg, #0f172a, #1e3a8a, #0284c7); color: white; border-radius: 12px; padding: 32px 24px; margin-bottom: 24px; }
+  .card-metric { border: none; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07); transition: transform 0.2s; }
+  .card-metric:hover { transform: translateY(-3px); }
+  .metric-val { font-size: 2.2rem; font-weight: 700; }
+  .metric-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.85; font-weight: 600; }
+  .chart-card { border: none; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07); margin-bottom: 24px; background: white; }
+  .table-custom th { background-color: #f1f5f9; color: #334155; font-size: 0.85rem; text-transform: uppercase; }
+  .badge-pucv { background-color: #e0f2fe; color: #0369a1; font-weight: 600; }
+  .badge-puc { background-color: #fef3c7; color: #92400e; font-weight: 600; }
+  .badge-upla { background-color: #dcfce7; color: #15803d; font-weight: 600; }
+  .badge-usach { background-color: #f3e8ff; color: #6b21a8; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container py-4">
+  <div class="header-box text-center">
+    <div class="d-inline-block px-3 py-1 bg-success bg-opacity-25 rounded-pill text-white small mb-2 fw-semibold">
+      ⚡ Datos actualizados al 13 de Octubre (224 registros brutos)
+    </div>
+    <h1 class="fw-bold mb-2">📊 Informe Estadístico: Adherentes Carta de Reclamo FONDECYT</h1>
+    <p class="mb-0 lead fs-6">Análisis consolidado de 222 investigadores únicos en más de 38 instituciones y universidades</p>
+  </div>
+
+  <!-- Métricas Clave -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-3">
+      <div class="card card-metric p-3 text-center bg-white border-start border-4 border-secondary">
+        <div class="metric-label text-secondary">Total Firmantes Únicos</div>
+        <div class="metric-val text-primary">222</div>
+        <small class="text-muted">224 registros brutos (2 duplicados)</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card card-metric p-3 text-center bg-white border-start border-4 border-danger">
+        <div class="metric-label text-danger">Investigadores Afectados</div>
+        <div class="metric-val text-danger">109</div>
+        <small class="text-muted">49.1% del total de adherentes</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card card-metric p-3 text-center bg-white border-start border-4 border-info">
+        <div class="metric-label text-info">Solidarios y Evaluadores</div>
+        <div class="metric-val text-info">113</div>
+        <small class="text-muted">110 solidarios + 3 evaluadores (50.9%)</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card card-metric p-3 text-center bg-white border-start border-4 border-success">
+        <div class="metric-label text-success">Instituciones y Centros</div>
+        <div class="metric-val text-success">38+</div>
+        <small class="text-muted">Presencia nacional e internacional</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Principales Hallazgos de la Actualización -->
+  <div class="card chart-card p-4 mb-4 border-start border-4 border-primary">
+    <h4 class="fw-bold text-dark mb-3">📌 Principales Variaciones y Datos a Destacar con la Nueva Nómina</h4>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="p-3 bg-light rounded-3 h-100">
+          <h6 class="fw-bold text-primary mb-2">1. Crecimiento Acelerado de Afectados (109 investigadores)</h6>
+          <p class="mb-0 small text-secondary">
+            Los investigadores afectados directos crecieron de 91 a <strong>109 personas</strong>.
+            De ellos, <strong>70 pertenecen a Fondecyt Regular 2027 (64.2%)</strong> y <strong>36 a Fondecyt Iniciación 2027 (33.0%)</strong>.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 bg-light rounded-3 h-100">
+          <h6 class="fw-bold text-primary mb-2">2. Mayoría de Apoyo Solidario Comunitario (113 personas)</h6>
+          <p class="mb-0 small text-secondary">
+            Por primera vez, el respaldo solidario de la comunidad científica supera en número absoluto a los afectados directos: <strong>110 académicos solidarios y 3 evaluadores Fondecyt</strong> (50.9% del total), ratificando que toda la comunidad científica considera la medida injusta.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 bg-light rounded-3 h-100">
+          <h6 class="fw-bold text-primary mb-2">3. Fuerte Salto en PUC, USACH, UDLA y U. de Chile</h6>
+          <p class="mb-0 small text-secondary">
+            La <strong>Pontificia Univ. Católica de Chile (PUC)</strong> creció fuertemente a <strong>16 adherentes</strong> (7 afectados + 9 solidarios).
+            La <strong>USACH</strong> aumentó a <strong>14 adherentes</strong> (12 afectados directos).
+            La <strong>Universidad de Chile</strong> suma <strong>12 adherentes</strong> (3 afectados + 9 solidarios).
+            La <strong>UDLA</strong> reúne <strong>10 adherentes</strong> (9 afectados).
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-3 bg-light rounded-3 h-100">
+          <h6 class="fw-bold text-primary mb-2">4. Dispersión Disciplinaria Crítica</h6>
+          <p class="mb-0 small text-secondary">
+            El área de <strong>Biología y Salud</strong> lidera con <strong>50 afectados directos (45.9%)</strong>, seguida por <strong>Ciencias Exactas y Naturales (25 afectados, 22.9%)</strong> y las <strong>Ingenierías (19 afectados, 17.4%)</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Consolidado 4 en 1 -->
+  <div class="card chart-card p-4 mb-4 text-center">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="fw-bold text-dark mb-0">Lámina Ejecutiva / Dashboard Consolidado (300 DPI)</h5>
+      <span class="badge bg-primary">Recomendado para Anexo de la Carta</span>
+    </div>
+    <p class="text-muted small mb-3 text-start">Cuatro paneles de alta resolución que condensan la fuerza argumentativa del reclamo.</p>
+    <a href="graficos/00_dashboard_completo_fondecyt.png" target="_blank" title="Clic para ver en tamaño completo">
+      <img src="graficos/00_dashboard_completo_fondecyt.png" class="img-fluid rounded border shadow-sm" alt="Dashboard Completo">
+    </a>
+  </div>
+
+  <!-- Galería de Gráficos Tipo Torta -->
+  <h4 class="fw-bold text-dark mb-3">Gráficos de Torta Detallados</h4>
+  <div class="row g-4 mb-4">
+    <div class="col-lg-6">
+      <div class="card chart-card p-4 h-100">
+        <h5 class="fw-bold mb-2 text-dark">1. Distribución de Adherentes por Calidad</h5>
+        <p class="text-muted small mb-3">Afectados directos (49.1%) vs Académicos solidarios (49.5%) y Evaluadores Fondecyt (1.4%).</p>
+        <a href="graficos/01_torta_adherentes_por_tipo.png" target="_blank">
+          <img src="graficos/01_torta_adherentes_por_tipo.png" class="img-fluid rounded border" alt="Adherentes por Tipo">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card chart-card p-4 h-100">
+        <h5 class="fw-bold mb-2 text-dark">2. Investigadores Afectados por Concurso</h5>
+        <p class="text-muted small mb-3">Regular 2027 (64.2%), Iniciación 2027 (33.0%) y otros (2.8%).</p>
+        <a href="graficos/02_torta_afectados_concurso.png" target="_blank">
+          <img src="graficos/02_torta_afectados_concurso.png" class="img-fluid rounded border" alt="Afectados por Concurso">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card chart-card p-4 h-100">
+        <h5 class="fw-bold mb-2 text-dark">3. Afectados por Macro-Área Científica</h5>
+        <p class="text-muted small mb-3">Biología y Salud (45.9%), Ciencias Exactas/Naturales (22.9%), Ingenierías (17.4%).</p>
+        <a href="graficos/03_torta_afectados_macroareas.png" target="_blank">
+          <img src="graficos/03_torta_afectados_macroareas.png" class="img-fluid rounded border" alt="Afectados por Macro-Área">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card chart-card p-4 h-100">
+        <h5 class="fw-bold mb-2 text-dark">4. Afectados por Grupo de Estudio Fondecyt</h5>
+        <p class="text-muted small mb-3">Desglose de los paneles con mayor cantidad de postulaciones excluidas (Medicina G1, Biología 3, Ing. 3, etc.).</p>
+        <a href="graficos/04_torta_afectados_grupos_estudio.png" target="_blank">
+          <img src="graficos/04_torta_afectados_grupos_estudio.png" class="img-fluid rounded border" alt="Grupos de Estudio Fondecyt">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card chart-card p-4 h-100">
+        <h5 class="fw-bold mb-2 text-dark">5. Universidades de Origen (Solo Afectados)</h5>
+        <p class="text-muted small mb-3">Desagregación de todas las casas de estudio con 2 o más afectados (UV, USACH, UDLA, Antofagasta, PUC, UTA, Talca, UOH, PUCV, UTFSM, UTEM, etc.).</p>
+        <a href="graficos/05_torta_afectados_universidades.png" target="_blank">
+          <img src="graficos/05_torta_afectados_universidades.png" class="img-fluid rounded border" alt="Universidades Afectados">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card chart-card p-4 h-100">
+        <h5 class="fw-bold mb-2 text-dark">6. Distribución Institucional de Todos los Firmantes</h5>
+        <p class="text-muted small mb-3">Presencia transversal de la comunidad científica total (Total: 222).</p>
+        <a href="graficos/06_torta_total_adherentes_universidades.png" target="_blank">
+          <img src="graficos/06_torta_total_adherentes_universidades.png" class="img-fluid rounded border" alt="Total Adherentes Universidades">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabla Institucional Completa y Cruzada -->
+  <div class="card chart-card p-4 mb-4">
+    <h5 class="fw-bold mb-3 text-dark">🏛️ Tabla Cruzada Institucional Completa: Afectados vs Solidarios vs Total</h5>
+    <div class="table-responsive">
+      <table class="table table-sm table-striped table-hover align-middle table-custom">
+        <thead>
+          <tr>
+            <th>Institución / Universidad</th>
+            <th class="text-center">Investigadores Afectados</th>
+            <th class="text-center">Académicos Solidarios</th>
+            <th class="text-center">Evaluadores Fondecyt</th>
+            <th class="text-end fw-bold">Total Firmantes</th>
+            <th class="text-end">% Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-primary">
+            <td><strong>Universidad de Valparaíso (UV)</strong></td>
+            <td class="text-center fw-bold text-danger">29</td>
+            <td class="text-center text-primary">53</td>
+            <td class="text-center text-warning">2</td>
+            <td class="text-end fw-bold">84</td>
+            <td class="text-end">37.8%</td>
+          </tr>
+          <tr class="table-warning">
+            <td><strong>Pontificia Univ. Católica de Chile (PUC)</strong></td>
+            <td class="text-center fw-bold text-danger">7</td>
+            <td class="text-center text-primary">9</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">16</td>
+            <td class="text-end">7.2%</td>
+          </tr>
+          <tr>
+            <td><strong>Univ. de Santiago de Chile (USACH)</strong></td>
+            <td class="text-center fw-bold text-danger">12</td>
+            <td class="text-center text-primary">2</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">14</td>
+            <td class="text-end">6.3%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad de Chile</strong></td>
+            <td class="text-center fw-bold text-danger">3</td>
+            <td class="text-center text-primary">9</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">12</td>
+            <td class="text-end">5.4%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad de Las Américas (UDLA)</strong></td>
+            <td class="text-center fw-bold text-danger">9</td>
+            <td class="text-center text-primary">1</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">10</td>
+            <td class="text-end">4.5%</td>
+          </tr>
+          <tr>
+            <td><strong>Univ. Técnica Federico Santa María (UTFSM)</strong></td>
+            <td class="text-center fw-bold text-danger">2</td>
+            <td class="text-center text-primary">7</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">9</td>
+            <td class="text-end">4.1%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad de Antofagasta</strong></td>
+            <td class="text-center fw-bold text-danger">8</td>
+            <td class="text-center text-primary">1</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">9</td>
+            <td class="text-end">4.1%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad de Tarapacá (UTA)</strong></td>
+            <td class="text-center fw-bold text-danger">4</td>
+            <td class="text-center text-primary">2</td>
+            <td class="text-center text-warning">1</td>
+            <td class="text-end fw-bold">7</td>
+            <td class="text-end">3.2%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad Mayor</strong></td>
+            <td class="text-center fw-bold text-danger">0</td>
+            <td class="text-center text-primary">6</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">6</td>
+            <td class="text-end">2.7%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad de Concepción (UdeC)</strong></td>
+            <td class="text-center fw-bold text-danger">1</td>
+            <td class="text-center text-primary">3</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">4</td>
+            <td class="text-end">1.8%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad de Talca</strong></td>
+            <td class="text-center fw-bold text-danger">4</td>
+            <td class="text-center text-primary">0</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">4</td>
+            <td class="text-end">1.8%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad de O'Higgins (UOH)</strong></td>
+            <td class="text-center fw-bold text-danger">4</td>
+            <td class="text-center text-primary">0</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">4</td>
+            <td class="text-end">1.8%</td>
+          </tr>
+          <tr class="table-info">
+            <td><strong>Pontificia Univ. Católica de Valparaíso (PUCV)</strong></td>
+            <td class="text-center fw-bold text-danger">2</td>
+            <td class="text-center text-primary">1</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">3</td>
+            <td class="text-end">1.4%</td>
+          </tr>
+          <tr class="table-success">
+            <td><strong>Universidad de Playa Ancha (UPLA)</strong></td>
+            <td class="text-center fw-bold text-danger">0</td>
+            <td class="text-center text-primary">3</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">3</td>
+            <td class="text-end">1.4%</td>
+          </tr>
+          <tr>
+            <td><strong>Univ. Católica del Maule (UCM)</strong></td>
+            <td class="text-center fw-bold text-danger">3</td>
+            <td class="text-center text-primary">0</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">3</td>
+            <td class="text-end">1.4%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad Central de Chile</strong></td>
+            <td class="text-center fw-bold text-danger">1</td>
+            <td class="text-center text-primary">1</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">2</td>
+            <td class="text-end">0.9%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad San Sebastián</strong></td>
+            <td class="text-center fw-bold text-danger">1</td>
+            <td class="text-center text-primary">1</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">2</td>
+            <td class="text-end">0.9%</td>
+          </tr>
+          <tr>
+            <td><strong>UMCE</strong></td>
+            <td class="text-center fw-bold text-danger">1</td>
+            <td class="text-center text-primary">1</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">2</td>
+            <td class="text-end">0.9%</td>
+          </tr>
+          <tr>
+            <td><strong>Univ. Tecnológica Metropolitana (UTEM)</strong></td>
+            <td class="text-center fw-bold text-danger">2</td>
+            <td class="text-center text-primary">0</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">2</td>
+            <td class="text-end">0.9%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad del Alba</strong></td>
+            <td class="text-center fw-bold text-danger">2</td>
+            <td class="text-center text-primary">0</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">2</td>
+            <td class="text-end">0.9%</td>
+          </tr>
+          <tr>
+            <td><strong>Universidad del Bío-Bío (UBB)</strong></td>
+            <td class="text-center fw-bold text-danger">1</td>
+            <td class="text-center text-primary">1</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">2</td>
+            <td class="text-end">0.9%</td>
+          </tr>
+          <tr>
+            <td><strong>Otras 17 Instituciones / Centros (1 c/u)</strong></td>
+            <td class="text-center fw-bold text-danger">11</td>
+            <td class="text-center text-primary">6</td>
+            <td class="text-center">0</td>
+            <td class="text-end fw-bold">17</td>
+            <td class="text-end">7.7%</td>
+          </tr>
+          <tr class="table-dark fw-bold">
+            <td>TOTAL GENERAL</td>
+            <td class="text-center text-warning">109</td>
+            <td class="text-center text-info">110</td>
+            <td class="text-center text-light">3</td>
+            <td class="text-end text-white">222</td>
+            <td class="text-end text-white">100.0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="text-center text-muted small py-3">
+    Archivo analizado: <code>D:\Docencia\carta-fondecyt\adherentes_carta.xlsx</code> &bull; Base actualizada: 224 registros (222 únicos)
+  </footer>
+</div>
+</body>
+</html>
