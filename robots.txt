@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manuelcastillos.github.io/fondecyt_carta/sitemap.xml
